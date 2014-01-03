@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" ng-app="wishlistApp">
+    <head>
+        <meta charset="utf-8">
+        <title>My HTML File</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="lib/angular.js"></script>
+        <script src="js/controller.js"></script>
+    </head>
+    <body ng-controller="wishlistCtrl">
+        <h2>Ønskeliste</h2>
+        <ul ng-repeat="wish in wishes">
+            {{wish.title}}
+        </ul>    
+    </body>
+</html>
