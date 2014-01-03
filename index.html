@@ -2,15 +2,19 @@
 <html lang="en" ng-app="wishlistApp">
     <head>
         <meta charset="utf-8">
-        <title>My HTML File</title>
+        <title>Ønskeliste</title>
         <link rel="stylesheet" href="css/bootstrap.css">
         <script src="lib/angular.js"></script>
         <script src="js/controller.js"></script>
     </head>
     <body ng-controller="wishlistCtrl">
-        <h2>Ønskeliste</h2>
+        <h2>{{applicationName}}</h2>
+        <br>
+        
         <ul ng-repeat="wish in wishes">
-            {{wish.title}}
-        </ul>    
+            <p>{{wish.title}} - <a href={{wish.link}} ng-hide="!wish.link">link</a></p>
+        </ul>
+
+        {{wishes.length}} ønsker...jaja!
     </body>
 </html>
