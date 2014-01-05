@@ -8,13 +8,15 @@
         <script src="js/controller.js"></script>
     </head>
     <body ng-controller="wishlistCtrl">
+        <div class="hero-unit">
         <h2>{{applicationName}}</h2>
         <br>
         
-        <ul ng-repeat="wish in wishes">
+        <ol ng-repeat="wish in wishes">             
             <p>{{wish.title}} - <a href={{wish.link}} ng-hide="!wish.link">link</a></p>
-        </ul>
+        </ol>
 
-        {{wishes.length}} ønsker...jaja!
-    </body>
+        {{wishes.length}} ønsker...jaja!  
+        </div>
+    </body> 
 </html>
