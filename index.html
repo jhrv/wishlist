@@ -4,19 +4,44 @@
         <meta charset="utf-8">
         <title>Ønskeliste</title>
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.css">
         <script src="lib/angular.js"></script>
+        <script src="lib/jquery.js"></script>
+        <script src="lib/bootstrap.js"></script>
         <script src="js/controller.js"></script>
     </head>
     <body ng-controller="wishlistCtrl">
-        <div class="hero-unit">
-        <h2>{{applicationName}}</h2>
-        <br>
-        
-        <ol ng-repeat="wish in wishes">             
-            <p>{{wish.title}} - <a href={{wish.link}} ng-hide="!wish.link">link</a></p>
-        </ol>
-
-        {{wishes.length}} ønsker...jaja!  
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">{{applicationName}}</a>
+            </div>
+            <div class="container"></div>
+        </div>
+        <div class="container">
+            
+            <div class="jumbotron">
+                <br>
+                <h3>Ønsker 
+                <span class="badge">{{wishes.length}}
+                </span>
+                </h3>
+                <hr>
+                <ul class="list-group" ng-repeat="wish in wishes">    <p style="font-size:0.9em;">{{wish.title}}
+                         <button ng-click="removeWish($index)" style="color:black;" class="btn btn-link btn-xs" type="button">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                        <span ng-hide="!wish.link"> - <a href={{wish.link}}>link</a>
+                        <span>
+                    </p>
+                </ul>
+                <div class="input-group">
+                    <input ng-model="wishInput" type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="addWish()">Legg til
+                        </button>
+                    </span>
+                </div>
+            </div>
         </div>
     </body> 
 </html>
