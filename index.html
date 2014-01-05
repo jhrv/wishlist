@@ -18,7 +18,6 @@
             <div class="container"></div>
         </div>
         <div class="container">
-            
             <div class="jumbotron">
                 <br>
                 <h3>Ønsker 
@@ -28,7 +27,7 @@
                 <hr>
                 <ul class="list-group" ng-repeat="wish in wishes">    <p style="font-size:0.9em;">{{wish.title}}
                          <button ng-click="removeWish($index)" style="color:black;" class="btn btn-link btn-xs" type="button">
-                            <span class="glyphicon glyphicon-ok"></span>
+                            <span class="glyphicon glyphicon-minus-sign"></span>
                         </button>
                         <span ng-hide="!wish.link"> - <a href={{wish.link}}>link</a>
                         <span>
@@ -37,7 +36,7 @@
                 <div class="input-group">
                     <input ng-model="wishInput" type="text" class="form-control">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" ng-click="addWish()">Legg til
+                        <button class="btn btn-default" type="button" ng-click="addWish()"><span class="glyphicon glyphicon-plus-sign"></span> Legg til
                         </button>
                     </span>
                 </div>
