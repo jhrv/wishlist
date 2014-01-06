@@ -1,6 +1,6 @@
 var wishlistApp = angular.module('wishlistApp', []);
 
-wishlistApp.controller('wishlistCtrl', function ($scope){
+wishlistApp.controller('wishlistCtrl', function ($scope) {
     $scope.applicationName = "Ønskeliste";
 
     $scope.wishes = [
@@ -9,7 +9,7 @@ wishlistApp.controller('wishlistCtrl', function ($scope){
         {'title': 'sommerdekk', 'link': ''},
     ];
 
-    $scope.addWish = function(){
+    $scope.addWish = function () {
         $scope.wishes.push({
             title: $scope.wishInput,
             link: "https://encrypted.google.com"
@@ -17,7 +17,7 @@ wishlistApp.controller('wishlistCtrl', function ($scope){
         $scope.wishInput = '';
     };
 
-    $scope.removeWish = function($index){
+    $scope.removeWish = function ($index) {
         $scope.wishes.splice($index, 1);
     };
 });

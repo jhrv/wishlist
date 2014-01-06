@@ -1,46 +1,49 @@
 <!doctype html>
 <html lang="en" ng-app="wishlistApp">
-    <head>
-        <meta charset="utf-8">
-        <title>Ønskeliste</title>
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.css">
-        <script src="lib/angular.js"></script>
-        <script src="lib/jquery.js"></script>
-        <script src="lib/bootstrap.js"></script>
-        <script src="js/controller.js"></script>
-    </head>
-    <body ng-controller="wishlistCtrl">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">{{applicationName}}</a>
-            </div>
-            <div class="container"></div>
-        </div>
-        <div class="container">
-            <div class="jumbotron">
-                <br>
-                <h3>Ønsker 
-                <span class="badge">{{wishes.length}}
-                </span>
-                </h3>
-                <hr>
-                <ul class="list-group" ng-repeat="wish in wishes">    <p style="font-size:0.9em;">{{wish.title}}
-                         <button ng-click="removeWish($index)" style="color:black;" class="btn btn-link btn-xs" type="button">
-                            <span class="glyphicon glyphicon-minus-sign"></span>
-                        </button>
-                        <span ng-hide="!wish.link"> - <a href={{wish.link}}>link</a>
-                        <span>
-                    </p>
-                </ul>
-                <div class="input-group">
-                    <input ng-model="wishInput" type="text" class="form-control">
+<head>
+    <meta charset="utf-8">
+    <title>Ønskeliste</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="lib/angular.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+<body ng-controller="wishlistCtrl">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">{{applicationName}}</a>
+    </div>
+    <div class="container"></div>
+</div>
+<div class="container">
+    <div class="jumbotron">
+        <br>
+
+        <h3>Ønsker
+            <span class="badge">{{wishes.length}}
+            </span>
+        </h3>
+        <hr>
+        <ul class="list-group" ng-repeat="wish in wishes">
+            <p style="font-size:0.9em;">{{wish.title}}
+                <button ng-click="removeWish($index)" style="color:black;" class="btn btn-link btn-xs" type="button">
+                    <span class="glyphicon glyphicon-minus-sign"></span>
+                </button>
+                <span ng-hide="!wish.link"> - <a href={{wish.link}}>link</a>
+                <span>
+            </p>
+        </ul>
+        <div class="input-group">
+            <input ng-model="wishInput" type="text" class="form-control">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" ng-click="addWish()"><span class="glyphicon glyphicon-plus-sign"></span> Legg til
+                        <button class="btn btn-default" type="button" ng-click="addWish()"><span
+                                class="glyphicon glyphicon-plus-sign"></span> Legg til
                         </button>
                     </span>
-                </div>
-            </div>
         </div>
-    </body> 
+    </div>
+</div>
+</body>
 </html>
