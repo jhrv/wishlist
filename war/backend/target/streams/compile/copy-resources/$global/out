@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/hrv/Documents/workspace/wishlist/war/backend/src/main/resources/com,/Users/hrv/Documents/workspace/wishlist/war/backend/target/scala-2.10/classes/com)[0m
+[0m[[0mdebug[0m] [0m	(/Users/hrv/Documents/workspace/wishlist/war/backend/src/main/resources/com/horvi,/Users/hrv/Documents/workspace/wishlist/war/backend/target/scala-2.10/classes/com/horvi)[0m
+[0m[[0mdebug[0m] [0m	(/Users/hrv/Documents/workspace/wishlist/war/backend/src/main/resources/com/horvi/wishlist,/Users/hrv/Documents/workspace/wishlist/war/backend/target/scala-2.10/classes/com/horvi/wishlist)[0m
