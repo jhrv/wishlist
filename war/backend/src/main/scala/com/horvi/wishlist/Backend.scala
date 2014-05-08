@@ -14,8 +14,9 @@ object Backend {
 
         val data = """
         [
-            { "title": "Dagstursekk", "link": "http://norrona.no/" },
-            { "title": "Sommerdekk + felg", "link": "https://dekk.no"}
+            { "title": "Dagstursekk", "link": "https://www.norrona.com/nb-NO/Products/4390-12/7760/bitihorn-back-pack-20l/" },
+            { "title": "Lett dunjakke", "link": "https://www.norrona.com/nb-NO/Products/3340-14/7718/falketind-primaloft60-jacket-m/" },
+            { "title": "Tur/Sykkelshorts", "link": "https://www.norrona.com/nb-NO/Products/7021-10/8851/fjora-shorts-m/" }
         ]
                    """
 
